@@ -1,7 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-const routes: Routes = [];
+const routes: Routes = [
+  {path:'', loadChildren: () => import ('./css-lnd/css-lnd.module').then(m => m.CssLndModule)}
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
